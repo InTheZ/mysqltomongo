@@ -1,0 +1,6 @@
+faker
+numpy
+flask
+PyMySQL
+PyMySQL[rsa]
+pymongo

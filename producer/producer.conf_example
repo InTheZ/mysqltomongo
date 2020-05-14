@@ -1,0 +1,4 @@
+[GENERAL]
+Endpoint = http://localhost:5000/report_data
+Interval = 1
+Batch = 10

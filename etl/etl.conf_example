@@ -1,0 +1,11 @@
+[MySQL]
+Host = localhost
+Port = 3306
+User = example_api
+Pass = example_api
+Database = example_api
+
+[Mongo]
+MongoURI = mongodb://example_api:example_api@localhost:27017/example_api
+Database = example_api
+Collection = data
