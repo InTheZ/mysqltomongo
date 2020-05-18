@@ -4,6 +4,7 @@ from sys import exit
 
 import mysql
 import mongo
+import util
 
 DEFAULT_CONFIG = "etl.conf"
 
@@ -32,6 +33,8 @@ def etlMain():
     while doc != None:
         mongo.insertDoc(doc)
         doc = mysql.getNextDoc()
+        transferedDocs += 1
+        util.printProgressBar(transferedDocs, numDocs)
 
 
 def handler(signal_received, frame):
@@ -44,3 +47,4 @@ if __name__ == "__main__":
     startup()
     etlMain()
     shutdown()
+    print("Finished ETL Job!")
